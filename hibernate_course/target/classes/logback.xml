@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Console appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root logger -->
+    <root level="WARN">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Hibernate specific loggers -->
+    <logger name="org.hibernate" level="WARN"/>
+    <logger name="org.hibernate.SQL" level="WARN"/>
+    <logger name="org.hibernate.type" level="WARN"/>
+    <logger name="org.hibernate.tool.hbm2ddl" level="WARN"/>
+    <logger name="org.hibernate.pretty" level="WARN"/>
+    <logger name="org.hibernate.cache" level="WARN"/>
+    <logger name="org.hibernate.transaction" level="WARN"/>
+    <logger name="org.hibernate.jdbc" level="WARN"/>
+    <logger name="org.hibernate.hql.ast.AST" level="WARN"/>
+    <logger name="org.hibernate.secure" level="WARN"/>
+    <logger name="org.hibernate.engine.internal" level="WARN"/>
+
+    <!-- MySQL Connector -->
+    <logger name="com.mysql" level="WARN"/>
+
+    <!-- Your application logger -->
+    <logger name="com.hibernate.demo" level="INFO"/>
+</configuration>
